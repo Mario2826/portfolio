@@ -1,48 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mario Feliciano | Portfolio</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom, #2c2c38, #7f7fa5);
       color: #fff;
-      text-align: center;
+      background: linear-gradient(to bottom, #2e2e3a, #7a7895);
       overflow-x: hidden;
-      position: relative;
     }
 
-    #particles-js {
-      position: absolute;
+    .particles {
+      position: fixed;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
       z-index: -1;
     }
 
-    .container {
-      padding: 40px 20px;
+    header {
+      text-align: center;
+      padding: 2rem 1rem 0;
     }
 
-    h1 {
-      font-size: 2.5em;
-      color: #3fa9f5;
+    header h1 {
+      font-size: 2.5rem;
+      color: #62aaff;
     }
 
-    .description {
-      background: rgba(0, 0, 0, 0.6);
-      padding: 1em 2em;
+    header h2 {
+      font-weight: 400;
+      font-size: 1rem;
+    }
+
+    .intro-box {
+      max-width: 700px;
+      margin: 1rem auto;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 1rem 2rem;
       border-radius: 10px;
-      margin: 0 auto 2em;
-      max-width: 800px;
+      font-size: 0.95rem;
     }
 
-    h2 {
-      margin-top: 40px;
-      font-size: 1.8em;
+    .section-title {
+      text-align: center;
+      margin: 2rem 0 1rem;
+      font-size: 1.5rem;
       font-weight: bold;
     }
 
@@ -50,225 +59,182 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 30px;
-      margin-top: 20px;
+      gap: 1rem;
+      padding: 0 1rem;
     }
 
     .card {
-      background: #fff;
-      color: #000;
-      border-radius: 15px;
-      padding: 25px;
-      max-width: 280px;
-      box-shadow: 0 10px 15px rgba(0,0,0,0.2);
-      transition: transform 0.3s, box-shadow 0.3s;
+      background: white;
+      color: black;
+      padding: 1.5rem;
+      border-radius: 10px;
+      width: 250px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     }
 
     .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 30px rgba(0,0,0,0.3);
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
     }
 
     .card img {
       max-width: 100px;
-      height: auto;
-      margin-bottom: 10px;
+      margin-bottom: 1rem;
     }
 
     .tags {
-      margin: 10px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.3rem;
+      margin: 0.5rem 0;
     }
 
     .tag {
-      background-color: #3c3c50;
-      color: #fff;
-      padding: 5px 10px;
+      background-color: #3b3b4f;
+      color: white;
+      padding: 0.25rem 0.5rem;
       border-radius: 20px;
-      margin: 3px;
+      font-size: 0.75rem;
+    }
+
+    .card a {
       display: inline-block;
-      font-size: 0.8em;
-    }
-
-    .buttons {
-      margin-top: 10px;
-    }
-
-    .buttons a {
+      margin: 0.5rem;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
       text-decoration: none;
       color: white;
       background-color: #28a745;
-      padding: 8px 15px;
-      border-radius: 5px;
-      margin: 5px;
-      display: inline-block;
-    }
-
-    .skills-section {
-      margin-top: 40px;
     }
 
     .skills {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 10px;
-      margin-top: 15px;
+      gap: 0.5rem;
+      padding: 1rem 0;
     }
 
-    .skill {
-      background-color: #3c3c50;
-      padding: 8px 16px;
-      border-radius: 20px;
+    .skill-badge {
+      background-color: #444;
+      padding: 0.5rem 1rem;
+      border-radius: 30px;
       font-weight: bold;
-      color: white;
+      font-size: 0.85rem;
     }
 
     .footer-buttons {
-      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding: 1rem 0 2rem;
     }
 
     .footer-buttons a {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
       background-color: #007bff;
       color: white;
-      padding: 10px 20px;
-      border-radius: 8px;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
       text-decoration: none;
-      font-weight: bold;
-      margin: 0 10px;
-    }
-
-    .footer-buttons a img {
-      height: 16px;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
   </style>
 </head>
+
 <body>
-  <div id="particles-js"></div>
+  <div id="particles-js" class="particles"></div>
 
-  <div class="container">
+  <header>
     <h1>Mario Feliciano</h1>
-    <p>Data Analyst | Tableau • SQL • R • Excel</p>
-    <div class="description">
-      <p>I'm a data analyst with a passion for uncovering insights through SQL, R, Tableau, and Excel. With a background in retail inventory and analytics, I create dashboards and reports that drive smarter business decisions. Actively seeking roles that challenge me to grow.</p>
+    <h2>Data Analyst | Tableau • SQL • R • Excel</h2>
+    <div class="intro-box">
+      I'm a data analyst with a passion for uncovering insights through SQL, R, Tableau, and Excel. With a background in retail inventory and analytics, I create dashboards and reports that drive smarter business decisions. Actively seeking roles that challenge me to grow.
     </div>
+  </header>
 
-    <h2>My Projects</h2>
-    <div class="projects">
-      <!-- Portfolio Website -->
-      <div class="card">
-        <img src="assets/portfolio.png" alt="Portfolio Website">
-        <h3>Portfolio Website</h3>
-        <p>Designed and developed a responsive portfolio using HTML, CSS, and GitHub Pages to showcase data projects.</p>
-        <div class="tags">
-          <span class="tag">HTML</span>
-          <span class="tag">CSS</span>
-          <span class="tag">GitHub</span>
-          <span class="tag">Web Dev</span>
-        </div>
-        <div class="buttons">
-          <a href="https://github.com/mario2826/portfolio" target="_blank">GitHub Repo</a>
-          <a href="https://mario2826.github.io/portfolio/" target="_blank">Live Site</a>
-        </div>
+  <div class="section-title">My Projects</div>
+  <div class="projects">
+    <div class="card">
+      <img src="assets/PORTFOLIO.png" alt="Portfolio Website">
+      <h3>Portfolio Website</h3>
+      <p>Designed and developed a responsive portfolio using HTML, CSS, and GitHub Pages to showcase data projects.</p>
+      <div class="tags">
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">GitHub</span>
+        <span class="tag">Web Dev</span>
       </div>
-
-      <!-- Deloitte -->
-      <div class="card">
-        <img src="assets/deloitte.png" alt="Deloitte">
-        <h3>Deloitte Job Simulation</h3>
-        <p>Cleaned and analyzed Excel datasets. Delivered insights in dashboards.</p>
-        <div class="tags">
-          <span class="tag">Excel</span>
-          <span class="tag">Data Cleaning</span>
-          <span class="tag">Simulation</span>
-        </div>
-        <div class="buttons">
-          <a href="https://github.com/mario2826/deloitte-simulation" target="_blank">GitHub Repo</a>
-          <a href="#" target="_blank">View Dashboard</a>
-        </div>
-      </div>
-
-      <!-- BigQuery 1 -->
-      <div class="card">
-        <img src="assets/bigquery1.png" alt="BigQuery Part 1">
-        <h3>BigQuery Data Exploration (Part 1)</h3>
-        <p>Explored HUD homelessness data. Created metrics and cleaned SQL data.</p>
-        <div class="tags">
-          <span class="tag">SQL</span>
-          <span class="tag">BigQuery</span>
-          <span class="tag">Data Wrangling</span>
-        </div>
-        <div class="buttons">
-          <a href="https://github.com/mario2826/bigquery-part1" target="_blank">GitHub Repo</a>
-        </div>
-      </div>
-
-      <!-- BigQuery 2 -->
-      <div class="card">
-        <img src="assets/bigquery2.png" alt="BigQuery Part 2">
-        <h3>BigQuery Data Exploration (Part 2)</h3>
-        <p>Tracked trends in unsheltered homelessness by location and time using SQL.</p>
-        <div class="tags">
-          <span class="tag">SQL</span>
-          <span class="tag">BigQuery</span>
-          <span class="tag">Trend Analysis</span>
-        </div>
-        <div class="buttons">
-          <a href="https://github.com/mario2826/bigquery-part2" target="_blank">GitHub Repo</a>
-        </div>
-      </div>
+      <a href="https://github.com/mario2826/portfolio" target="_blank">GitHub Repo</a>
+      <a href="https://mario2826.github.io/portfolio/" target="_blank">Live Site</a>
     </div>
-
-    <div class="skills-section">
-      <h2>Skills</h2>
-      <div class="skills">
-        <div class="skill">SQL</div>
-        <div class="skill">R</div>
-        <div class="skill">Excel</div>
-        <div class="skill">Tableau</div>
-        <div class="skill">Data Visualization</div>
-        <div class="skill">ETL</div>
-        <div class="skill">Data Cleaning</div>
+    <div class="card">
+      <img src="assets/deloitte.png" alt="Deloitte Job Simulation">
+      <h3>Deloitte Job Simulation</h3>
+      <p>Cleaned and analyzed Excel datasets. Delivered insights in dashboards.</p>
+      <div class="tags">
+        <span class="tag">Excel</span>
+        <span class="tag">Data Cleaning</span>
+        <span class="tag">Simulation</span>
       </div>
+      <a href="#">GitHub Repo</a>
+      <a href="#">View Dashboard</a>
     </div>
-
-    <div class="footer-buttons">
-      <a href="https://www.linkedin.com/in/mario-feliciano/" target="_blank">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn"> LinkedIn
-      </a>
-     <a href="assets/Mario_Feliciano_Resume.pdf" target="_blank">
-  📄 Resume
-</a>
-      <a href="https://github.com/mario2826" target="_blank">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub"> GitHub
-      </a>
+    <div class="card">
+      <img src="assets/bigquery.png" alt="BigQuery Project">
+      <h3>BigQuery Data Exploration (Part 1)</h3>
+      <p>Explored HUD homelessness data. Created metrics and cleaned SQL data.</p>
+      <div class="tags">
+        <span class="tag">SQL</span>
+        <span class="tag">BigQuery</span>
+        <span class="tag">Data Wrangling</span>
+      </div>
+      <a href="#">GitHub Repo</a>
+    </div>
+    <div class="card">
+      <img src="assets/bigquery.png" alt="BigQuery Project">
+      <h3>BigQuery Data Exploration (Part 2)</h3>
+      <p>Tracked trends in unsheltered homelessness by location and time using SQL.</p>
+      <div class="tags">
+        <span class="tag">SQL</span>
+        <span class="tag">BigQuery</span>
+        <span class="tag">Trend Analysis</span>
+      </div>
+      <a href="#">GitHub Repo</a>
     </div>
   </div>
 
-  <!-- Particles.js -->
+  <div class="section-title">Skills</div>
+  <div class="skills">
+    <div class="skill-badge">SQL</div>
+    <div class="skill-badge">R</div>
+    <div class="skill-badge">Excel</div>
+    <div class="skill-badge">Tableau</div>
+    <div class="skill-badge">Data Visualization</div>
+    <div class="skill-badge">ETL</div>
+    <div class="skill-badge">Data Cleaning</div>
+  </div>
+
+  <div class="footer-buttons">
+    <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
+      <i class="fab fa-linkedin"></i> LinkedIn
+    </a>
+    <a href="assets/Mario_Feliciano_Resume.pdf" target="_blank">
+      <i class="fas fa-file-pdf"></i> Resume
+    </a>
+    <a href="https://github.com/mario2826" target="_blank">
+      <i class="fab fa-github"></i> GitHub
+    </a>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script>
-    particlesJS("particles-js", {
-      particles: {
-        number: { value: 60 },
-        color: { value: "#ffffff" },
-        shape: { type: "polygon" },
-        opacity: { value: 0.4 },
-        size: { value: 3 },
-        line_linked: { enable: true, distance: 120, color: "#ffffff", opacity: 0.4, width: 1 },
-        move: { enable: true, speed: 2 }
-      },
-      interactivity: {
-        detect_on: "canvas",
-        events: {
-          onhover: { enable: true, mode: "repulse" },
-          onclick: { enable: true, mode: "push" }
-        }
-      },
-      retina_detect: true
-    });
+    particlesJS.load('particles-js', 'https://cdn.jsdelivr.net/gh/VincentGarreau/particles.js/particles.json');
   </script>
 </body>
+
 </html>
