@@ -6,28 +6,17 @@
   <title>Mario Feliciano | Portfolio</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      background-color: #f9f9f9;
-      color: #333;
-    }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
 
-    h1 {
-      color: #004aad;
-    }
-
-    h2 {
-      margin-top: 40px;
-      color: #004aad;
-    }
-
-    .project-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      margin-top: 20px;
-    }
-
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
     .card {
       background-color: white;
       border: 1px solid #ddd;
@@ -80,50 +69,51 @@
   </style>
 </head>
 <body>
+  <div class="container">
+    <h1>Mario Feliciano</h1>
+    <p class="subtitle">Data Analyst | Tableau • SQL • R • Excel</p>
 
-  <h1>Mario Feliciano</h1>
-  <p>Data Analyst | Tableau • SQL • R • Excel</p>
+    <h2 class="section-title">My Projects</h2>
 
-  <h2>My Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <img src="assets/deloitte.png" alt="Deloitte Simulation">
+        <h3>Deloitte Job Simulation</h3>
+        <p>
+          Completed a job simulation with Deloitte via Forage. Cleaned and analyzed datasets in Excel, created actionable insights.
+        </p>
+        <div class="buttons">
+          <a href="https://github.com/mario2826/Forage-Deloitte-Job-Simulation" target="_blank" class="btn">GitHub Repo</a>
+          <a href="https://public.tableau.com/views/DeloitteSimulationDashboard/Overview" target="_blank" class="btn">View Dashboard</a>
+        </div>
+      </div>
 
-  <div class="project-container">
+      <div class="card">
+        <img src="assets/bigquery1.png" alt="BigQuery Part 1">
+        <h3>BigQuery Data Exploration<br>(Part 1)</h3>
+        <p>
+          Explored HUD homelessness data using BigQuery. Created a new table with metrics and cleaned the data with SQL.
+        </p>
+        <div class="buttons">
+          <a href="https://github.com/mario2826/BigQuery-Data-Exploration-Part-1" target="_blank" class="btn">GitHub Repo</a>
+        </div>
+      </div>
 
-    <!-- Deloitte Project -->
-    <div class="card">
-      <img src="assets/deloitte.png" alt="Deloitte Simulation">
-      <h3>Deloitte Job Simulation</h3>
-      <p>Completed a job simulation with Deloitte via Forage. Cleaned and analyzed datasets in Excel, created actionable insights.</p>
-      <div class="buttons">
-        <a href="https://github.com/Mario2826/Forage-Deloitte-Job-Simulation" target="_blank">GitHub Repo</a>
-        <a href="https://public.tableau.com/views/DeloitteDashboardExample/ClientDashboard" target="_blank">View Dashboard</a>
+      <div class="card">
+        <img src="assets/bigquery2.png" alt="BigQuery Part 2">
+        <h3>BigQuery Data Exploration<br>(Part 2)</h3>
+        <p>
+          Analyzed homelessness trends by state and location using SQL. Tracked unsheltered rates and identified high-need areas.
+        </p>
+        <div class="buttons">
+          <a href="https://github.com/mario2826/BigQuery-Data-Exploration-Part-2" target="_blank" class="btn">GitHub Repo</a>
+        </div>
       </div>
     </div>
 
-    <!-- BigQuery Part 1 -->
-    <div class="card">
-      <img src="assets/bigquery1.png" alt="BigQuery Part 1">
-      <h3>BigQuery Data Exploration<br>(Part 1)</h3>
-      <p>Explored HUD homelessness data using BigQuery. Created a new table with metrics and cleaned the data with SQL.</p>
-      <div class="buttons">
-        <a href="https://github.com/Mario2826/BigQuery-Data-Exploration-Part-1" target="_blank">GitHub Repo</a>
-      </div>
-    </div>
-
-    <!-- BigQuery Part 2 -->
-    <div class="card">
-      <img src="assets/bigquery2.png" alt="BigQuery Part 2">
-      <h3>BigQuery Data Exploration<br>(Part 2)</h3>
-      <p>Analyzed homelessness trends by state and location using SQL. Tracked unsheltered rates and identified high-need areas.</p>
-      <div class="buttons">
-        <a href="https://github.com/Mario2826/BigQuery-Data-Exploration-Part-2" target="_blank">GitHub Repo</a>
-      </div>
-    </div>
-
+    <footer>
+      <p>Connect with me on <a href="https://www.linkedin.com/in/mario-feliciano" target="_blank">LinkedIn</a> or explore my work on <a href="https://github.com/mario2826" target="_blank">GitHub</a>.</p>
+    </footer>
   </div>
-
-  <div class="footer">
-    Connect with me on <a href="https://www.linkedin.com/in/mario-feliciano" target="_blank">LinkedIn</a> or explore my work on <a href="https://github.com/Mario2826" target="_blank">GitHub</a>.
-  </div>
-
 </body>
 </html>
