@@ -2,186 +2,255 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mario Feliciano | Data Analyst Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mario Feliciano | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom right, #2f2f35, #6a6a87);
       color: white;
+      background: linear-gradient(180deg, #2f2f2f, #5b5f8f);
+      position: relative;
+      z-index: 1;
     }
+
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      top: 0;
+      left: 0;
+    }
+
     .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-    header {
+      position: relative;
+      z-index: 1;
       text-align: center;
-      padding: 40px 20px;
+      padding: 2rem;
     }
-    header h1 {
-      font-size: 2.5em;
-      color: #58a6ff;
+
+    h1 {
+      font-size: 2.5rem;
+      color: #4da3ff;
     }
-    .intro {
-      background-color: rgba(0,0,0,0.4);
-      border-radius: 12px;
-      padding: 20px;
-      max-width: 700px;
-      margin: 0 auto 30px;
-      font-size: 1.1em;
-    }
+
     h2 {
-      text-align: center;
-      margin: 40px 0 20px;
-      font-size: 1.8em;
+      margin-top: 2rem;
     }
-    .projects {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    .card {
-      background-color: #fff;
-      color: #000;
-      border-radius: 12px;
-      padding: 20px;
-      width: 300px;
-      text-align: center;
-      transition: transform 0.3s, box-shadow 0.3s;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    }
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-    }
-    .card img {
-      max-width: 100px;
-    }
-    .buttons button {
-      margin: 5px;
-      background-color: #28a745;
-      border: none;
-      padding: 8px 12px;
-      color: white;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    .buttons button:hover {
-      background-color: #218838;
-    }
-    .tags span {
-      background: #3f3d56;
-      color: white;
-      padding: 4px 8px;
-      margin: 2px;
-      border-radius: 10px;
-      font-size: 0.8em;
+
+    .intro-box {
+      background: rgba(0,0,0,0.5);
       display: inline-block;
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      max-width: 650px;
     }
-    .skills {
+
+    .projects {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 12px;
-      margin: 20px 0;
+      gap: 2rem;
+      margin-top: 2rem;
     }
-    .skills span {
-      background-color: #444;
-      padding: 10px 16px;
-      border-radius: 20px;
-      font-weight: bold;
+
+    .card {
+      background: white;
+      color: black;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      width: 300px;
+      padding: 1.5rem;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
-    .footer-buttons {
-      text-align: center;
-      margin-top: 30px;
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
     }
-    .footer-buttons a {
+
+    .card img {
+      height: 60px;
+      margin-bottom: 1rem;
+    }
+
+    .buttons {
+      margin-top: 1rem;
+    }
+
+    .buttons a {
       text-decoration: none;
-      background-color: #007bff;
+      background: #28a745;
       color: white;
-      padding: 10px 16px;
-      border-radius: 8px;
-      margin: 5px;
+      padding: 0.4rem 0.8rem;
+      border-radius: 5px;
+      margin: 0.3rem;
       display: inline-block;
     }
-    .footer-buttons a i {
-      margin-right: 6px;
+
+    .tags {
+      margin-top: 1rem;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #3b3b5b;
+      color: white;
+      padding: 0.25rem 0.6rem;
+      margin: 0.2rem;
+      border-radius: 10px;
+      font-size: 0.8rem;
+    }
+
+    .footer-buttons {
+      margin-top: 2rem;
+    }
+
+    .footer-buttons a {
+      text-decoration: none;
+      padding: 0.6rem 1rem;
+      background-color: #007bff;
+      color: white;
+      border-radius: 8px;
+      margin: 0.4rem;
+      display: inline-flex;
+      align-items: center;
+      transition: background 0.3s;
+    }
+
+    .footer-buttons a:hover {
+      background-color: #0056b3;
+    }
+
+    .footer-buttons i {
+      margin-right: 8px;
+    }
+
+    .skills {
+      margin-top: 3rem;
+    }
+
+    .skills h2 {
+      color: white;
+    }
+
+    .skill-tag {
+      display: inline-block;
+      background-color: #3b3b5b;
+      color: white;
+      padding: 0.4rem 0.8rem;
+      margin: 0.4rem;
+      border-radius: 20px;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header data-aos="fade-down">
-      <h1>Mario Feliciano</h1>
-      <p>Data Analyst | Tableau • SQL • R • Excel</p>
-    </header>
+  <div id="particles-js"></div>
 
-    <div class="intro" data-aos="fade-in">
-      I'm a data analyst with a passion for uncovering insights through SQL, R, Tableau, and Excel. With
-      a background in retail inventory and analytics, I create dashboards and reports that drive smarter
-      business decisions. Actively seeking roles that challenge me to grow.
+  <div class="container">
+    <h1>Mario Feliciano</h1>
+    <p>Data Analyst | Tableau • SQL • R • Excel</p>
+    <div class="intro-box">
+      I'm a data analyst with a passion for uncovering insights through SQL, R, Tableau, and Excel. With a background in retail inventory and analytics, I create dashboards and reports that drive smarter business decisions. Actively seeking roles that challenge me to grow.
     </div>
 
-    <h2 data-aos="zoom-in">My Projects</h2>
+    <h2>My Projects</h2>
     <div class="projects">
-      <div class="card" data-aos="fade-up">
-        <img src="assets/deloitte.png" alt="Deloitte">
+      <div class="card">
+        <img src="assets/deloitte.png" alt="Deloitte Logo">
         <h3>Deloitte Job Simulation</h3>
         <p>Cleaned and analyzed Excel datasets. Delivered insights in dashboards.</p>
         <div class="tags">
-          <span>Excel</span><span>Data Cleaning</span><span>Simulation</span>
+          <span class="tag">Excel</span>
+          <span class="tag">Data Cleaning</span>
+          <span class="tag">Simulation</span>
         </div>
         <div class="buttons">
-          <button onclick="window.open('https://github.com/mario2826/Deloitte-Simulation')">GitHub Repo</button>
-          <button onclick="window.open('https://public.tableau.com/app/profile/mario.feliciano/viz/DeloitteSimulationDashboard/JobSimulation')">View Dashboard</button>
+          <a href="https://github.com/mario2826/Deloitte-Simulation" target="_blank">GitHub Repo</a>
+          <a href="https://public.tableau.com/views/DeloitteJobSimulationDashboard/..." target="_blank">View Dashboard</a>
         </div>
       </div>
 
-      <div class="card" data-aos="fade-up" data-aos-delay="100">
+      <div class="card">
         <img src="assets/bigquery1.png" alt="BigQuery">
         <h3>BigQuery Data Exploration (Part 1)</h3>
         <p>Explored HUD homelessness data. Created metrics and cleaned SQL data.</p>
         <div class="tags">
-          <span>SQL</span><span>BigQuery</span><span>Data Wrangling</span>
+          <span class="tag">SQL</span>
+          <span class="tag">BigQuery</span>
+          <span class="tag">Data Wrangling</span>
         </div>
         <div class="buttons">
-          <button onclick="window.open('https://github.com/mario2826/BigQuery-Part-1')">GitHub Repo</button>
+          <a href="https://github.com/mario2826/BigQuery-Exploration" target="_blank">GitHub Repo</a>
         </div>
       </div>
 
-      <div class="card" data-aos="fade-up" data-aos-delay="200">
+      <div class="card">
         <img src="assets/bigquery2.png" alt="BigQuery">
         <h3>BigQuery Data Exploration (Part 2)</h3>
         <p>Tracked trends in unsheltered homelessness by location and time using SQL.</p>
         <div class="tags">
-          <span>SQL</span><span>BigQuery</span><span>Trend Analysis</span>
+          <span class="tag">SQL</span>
+          <span class="tag">BigQuery</span>
+          <span class="tag">Trend Analysis</span>
         </div>
         <div class="buttons">
-          <button onclick="window.open('https://github.com/mario2826/BigQuery-Part-2')">GitHub Repo</button>
+          <a href="https://github.com/mario2826/BigQuery-Exploration" target="_blank">GitHub Repo</a>
         </div>
       </div>
     </div>
 
-    <h2 data-aos="zoom-in">Skills</h2>
-    <div class="skills" data-aos="fade-in">
-      <span>SQL</span><span>R</span><span>Excel</span><span>Tableau</span><span>Data Visualization</span><span>ETL</span><span>Data Cleaning</span>
+    <div class="skills">
+      <h2>Skills</h2>
+      <span class="skill-tag">SQL</span>
+      <span class="skill-tag">R</span>
+      <span class="skill-tag">Excel</span>
+      <span class="skill-tag">Tableau</span>
+      <span class="skill-tag">Data Visualization</span>
+      <span class="skill-tag">ETL</span>
+      <span class="skill-tag">Data Cleaning</span>
     </div>
 
-    <div class="footer-buttons" data-aos="zoom-in">
-      <a href="https://www.linkedin.com/in/mario-feliciano1" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-      <a href="assets/Mario_Feliciano_Resume.pdf" target="_blank"><i class="fas fa-file-alt"></i> Resume</a>
-      <a href="https://github.com/mario2826" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+    <div class="footer-buttons">
+      <a href="https://www.linkedin.com/in/mario2826/" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn</a>
+      <a href="assets/Mario_Feliciano_Resume.pdf" target="_blank"><i class="fas fa-file"></i>Resume</a>
+      <a href="https://github.com/mario2826" target="_blank"><i class="fab fa-github"></i>GitHub</a>
     </div>
   </div>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script>
-    AOS.init();
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 60, density: { enable: true, value_area: 800 } },
+        color: { value: "#ffffff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.3, random: true },
+        size: { value: 3, random: true },
+        move: {
+          enable: true,
+          speed: 1.5,
+          direction: "none",
+          out_mode: "out"
+        }
+      },
+      interactivity: {
+        events: {
+          onhover: { enable: true, mode: "grab" },
+          onclick: { enable: true, mode: "push" }
+        },
+        modes: {
+          grab: { distance: 140, line_linked: { opacity: 0.4 } },
+          push: { particles_nb: 4 }
+        }
+      },
+      retina_detect: true
+    });
   </script>
 </body>
 </html>
