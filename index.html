@@ -2,69 +2,103 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mario Feliciano | Portfolio</title>
   <style>
     body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 40px 20px;
-  background-color: #f9f9f9;
-}
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 40px 20px;
+      background-color: #f9f9f9;
+    }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
-}
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    h1 {
+      color: #0366d6;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      color: #333;
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+
+    .section-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #1f4f82;
+    }
+
+    .projects {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
     .card {
-      background-color: white;
-      border: 1px solid #ddd;
+      background-color: #fff;
       border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       padding: 20px;
       width: 300px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       text-align: center;
     }
 
     .card img {
-      max-width: 100%;
+      max-width: 100px;
       height: auto;
       margin-bottom: 10px;
     }
 
     .card h3 {
-      margin-bottom: 10px;
+      font-size: 18px;
+      margin: 10px 0 5px;
     }
 
     .card p {
       font-size: 14px;
-      margin-bottom: 15px;
+      color: #333;
     }
 
     .buttons {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
+      margin-top: 15px;
     }
 
-    .buttons a {
-      text-decoration: none;
-      padding: 8px 12px;
+    .btn {
+      display: inline-block;
+      padding: 8px 14px;
       background-color: #28a745;
-      color: white;
-      border-radius: 4px;
-      font-size: 14px;
-    }
-
-    .footer {
-      margin-top: 60px;
-      font-size: 14px;
-    }
-
-    .footer a {
-      color: #004aad;
+      color: #fff;
       text-decoration: none;
+      border-radius: 5px;
+      font-size: 14px;
+      margin: 5px;
+    }
+
+    .btn:hover {
+      background-color: #218838;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #0366d6;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -77,42 +111,41 @@
 
     <div class="projects">
       <div class="card">
-        <img src="assets/deloitte.png" alt="Deloitte Simulation">
+        <img src="assets/deloitte.png" alt="Deloitte Simulation" />
         <h3>Deloitte Job Simulation</h3>
-        <p>
-          Completed a job simulation with Deloitte via Forage. Cleaned and analyzed datasets in Excel, created actionable insights.
-        </p>
+        <p>Completed a job simulation with Deloitte via Forage. Cleaned and analyzed datasets in Excel, created actionable insights.</p>
         <div class="buttons">
-          <a href="https://github.com/mario2826/Forage-Deloitte-Job-Simulation" target="_blank" class="btn">GitHub Repo</a>
-          <a href="https://public.tableau.com/views/DeloitteSimulationDashboard/Overview" target="_blank" class="btn">View Dashboard</a>
+          <a href="https://github.com/mario2826/Forage-Deloitte-Job-Simulation" class="btn" target="_blank">GitHub Repo</a>
+          <a href="https://public.tableau.com/views/DeloitteSimulationDashboard/Overview" class="btn" target="_blank">View Dashboard</a>
         </div>
       </div>
 
       <div class="card">
-        <img src="assets/bigquery1.png" alt="BigQuery Part 1">
+        <img src="assets/bigquery1.png" alt="BigQuery Part 1" />
         <h3>BigQuery Data Exploration<br>(Part 1)</h3>
-        <p>
-          Explored HUD homelessness data using BigQuery. Created a new table with metrics and cleaned the data with SQL.
-        </p>
+        <p>Explored HUD homelessness data using BigQuery. Created a new table with metrics and cleaned the data with SQL.</p>
         <div class="buttons">
-          <a href="https://github.com/mario2826/BigQuery-Data-Exploration-Part-1" target="_blank" class="btn">GitHub Repo</a>
+          <a href="https://github.com/mario2826/BigQuery-Data-Exploration-Part-1" class="btn" target="_blank">GitHub Repo</a>
         </div>
       </div>
 
       <div class="card">
-        <img src="assets/bigquery2.png" alt="BigQuery Part 2">
+        <img src="assets/bigquery2.png" alt="BigQuery Part 2" />
         <h3>BigQuery Data Exploration<br>(Part 2)</h3>
-        <p>
-          Analyzed homelessness trends by state and location using SQL. Tracked unsheltered rates and identified high-need areas.
-        </p>
+        <p>Analyzed homelessness trends by state and location using SQL. Tracked unsheltered rates and identified high-need areas.</p>
         <div class="buttons">
-          <a href="https://github.com/mario2826/BigQuery-Data-Exploration-Part-2" target="_blank" class="btn">GitHub Repo</a>
+          <a href="https://github.com/mario2826/BigQuery-Data-Exploration-Part-2" class="btn" target="_blank">GitHub Repo</a>
         </div>
       </div>
     </div>
 
     <footer>
-      <p>Connect with me on <a href="https://www.linkedin.com/in/mario-feliciano" target="_blank">LinkedIn</a> or explore my work on <a href="https://github.com/mario2826" target="_blank">GitHub</a>.</p>
+      <p>
+        Connect with me on
+        <a href="https://www.linkedin.com/in/mario-feliciano" target="_blank">LinkedIn</a>
+        or explore my work on
+        <a href="https://github.com/mario2826" target="_blank">GitHub</a>.
+      </p>
     </footer>
   </div>
 </body>
