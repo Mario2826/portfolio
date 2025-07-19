@@ -1,205 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mario Feliciano | Data Analyst Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mario Feliciano | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      padding: 0;
+      background: linear-gradient(to bottom, #1f1c2c, #928dab);
       color: #fff;
       text-align: center;
     }
 
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 2rem;
+    }
+
     h1 {
-      margin-top: 40px;
-      font-size: 2.5em;
-      color: #66b2ff;
+      font-size: 2.5rem;
+      color: #4dabf7;
+      margin-bottom: 0.2rem;
     }
 
-    .subheader {
-      font-size: 1.1em;
-      margin-bottom: 20px;
+    .subtitle {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
     }
 
-    .intro {
-      max-width: 700px;
-      margin: 0 auto 30px auto;
-      line-height: 1.6;
+    .about {
+      font-size: 1rem;
+      max-width: 800px;
+      margin: 1rem auto 2rem;
+      color: #e1e1e1;
     }
 
     h2 {
-      font-size: 1.8em;
-      margin-bottom: 20px;
+      color: #ffffff;
+      margin-top: 2rem;
     }
 
     .projects {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
-      padding: 20px;
+      gap: 1.5rem;
+      flex-wrap: wrap;
     }
 
     .card {
       background: #fff;
       color: #000;
       border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      padding: 1.5rem;
       width: 300px;
-      transition: transform 0.3s;
+      transition: transform 0.3s ease;
     }
 
     .card:hover {
-      transform: scale(1.03);
+      transform: translateY(-8px);
     }
 
     .card img {
-      height: 60px;
-      margin-bottom: 10px;
+      max-width: 100px;
+      margin-bottom: 1rem;
     }
 
     .card h3 {
-      margin: 10px 0;
+      margin-bottom: 0.5rem;
     }
 
-    .buttons {
+    .card p {
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .card .tags {
       display: flex;
-      justify-content: center;
-      gap: 10px;
       flex-wrap: wrap;
-      margin-top: 10px;
-    }
-
-    .buttons a {
-      background-color: #28a745;
-      color: white;
-      padding: 6px 12px;
-      border-radius: 5px;
-      text-decoration: none;
-      transition: background-color 0.3s;
-    }
-
-    .buttons a:hover {
-      background-color: #218838;
-    }
-
-    .tags {
-      margin-top: 10px;
+      gap: 5px;
+      justify-content: center;
+      margin-bottom: 1rem;
     }
 
     .tag {
-      background-color: #243b80;
+      background: #2d3a80;
       color: #fff;
-      padding: 4px 8px;
-      border-radius: 4px;
-      font-size: 0.75em;
-      margin: 2px;
+      padding: 2px 10px;
+      border-radius: 12px;
+      font-size: 0.75rem;
+    }
+
+    .buttons a {
       display: inline-block;
+      padding: 0.5rem 1rem;
+      margin: 0.25rem;
+      border-radius: 5px;
+      text-decoration: none;
+      color: #fff;
+      background-color: #28a745;
     }
 
-    .footer-buttons {
-      margin: 40px auto;
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
+    .footer-links {
+      margin-top: 2rem;
     }
 
-    .footer-buttons a {
+    .footer-links a {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 10px 16px;
-      border: none;
+      margin: 0.5rem;
+      padding: 0.5rem 1rem;
       border-radius: 5px;
       text-decoration: none;
-      color: white;
       background-color: #007bff;
-      transition: background-color 0.3s;
-      font-weight: bold;
+      color: white;
+      transition: background 0.3s;
     }
 
-    .footer-buttons a:hover {
+    .footer-links a:hover {
       background-color: #0056b3;
-    }
-
-    .footer-buttons img {
-      height: 20px;
     }
   </style>
 </head>
 <body>
-  <h1>Mario Feliciano</h1>
-  <p class="subheader">Data Analyst | Tableau • SQL • R • Excel</p>
+  <div class="container">
+    <h1>Mario Feliciano</h1>
+    <p class="subtitle">Data Analyst | Tableau • SQL • R • Excel</p>
+    <p class="about">
+      I'm a data analyst with a passion for uncovering insights through SQL, R, Tableau, and Excel. With a background in retail inventory and analytics, I create dashboards and reports that drive smarter business decisions. Actively seeking roles that challenge me to grow.
+    </p>
 
-  <p class="intro">
-    I'm a data analyst with a passion for uncovering insights through SQL, R, Tableau, and Excel. With a background in retail inventory and analytics, I create dashboards and reports that drive smarter business decisions. Actively seeking roles that challenge me to grow.
-  </p>
-
-  <h2>My Projects</h2>
-
-  <div class="projects">
-    <div class="card">
-      <img src="assets/deloitte.png" alt="Deloitte Logo">
-      <h3>Deloitte Job Simulation</h3>
-      <p>Completed a job simulation with Deloitte via Forage. Cleaned and analyzed datasets in Excel, created actionable insights.</p>
-      <div class="tags">
-        <span class="tag">Excel</span>
-        <span class="tag">Data Cleaning</span>
-        <span class="tag">Simulation</span>
+    <h2>My Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <img src="assets/deloitte.png" alt="Deloitte">
+        <h3>Deloitte Job Simulation</h3>
+        <p>Completed a job simulation with Deloitte via Forage. Cleaned and analyzed datasets in Excel, created actionable insights.</p>
+        <div class="tags">
+          <span class="tag">Excel</span>
+          <span class="tag">Data Cleaning</span>
+          <span class="tag">Simulation</span>
+        </div>
+        <div class="buttons">
+          <a href="https://github.com/mario2826/deloitte-simulation" target="_blank">GitHub Repo</a>
+          <a href="https://public.tableau.com/app/profile/mario.feliciano/viz/DeloitteSimulationDashboard/Overview" target="_blank">View Dashboard</a>
+        </div>
       </div>
-      <div class="buttons">
-        <a href="https://github.com/mario2826/Deloitte-Job-Simulation" target="_blank">GitHub Repo</a>
-        <a href="https://public.tableau.com/app/profile/mario.feliciano/viz/DeloitteJobSimulationDashboard/Overview" target="_blank">View Dashboard</a>
+
+      <div class="card">
+        <img src="assets/bigquery1.png" alt="BigQuery 1">
+        <h3>BigQuery Data Exploration (Part 1)</h3>
+        <p>Explored HUD homelessness data using BigQuery. Created a new table with metrics and cleaned the data with SQL.</p>
+        <div class="tags">
+          <span class="tag">SQL</span>
+          <span class="tag">BigQuery</span>
+          <span class="tag">Data Wrangling</span>
+        </div>
+        <div class="buttons">
+          <a href="https://github.com/mario2826/bigquery-homelessness" target="_blank">GitHub Repo</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="assets/bigquery2.png" alt="BigQuery 2">
+        <h3>BigQuery Data Exploration (Part 2)</h3>
+        <p>Analyzed homelessness trends by state and location using SQL. Tracked unsheltered rates and identified high-need areas.</p>
+        <div class="tags">
+          <span class="tag">SQL</span>
+          <span class="tag">BigQuery</span>
+          <span class="tag">Trend Analysis</span>
+        </div>
+        <div class="buttons">
+          <a href="https://github.com/mario2826/bigquery-homelessness" target="_blank">GitHub Repo</a>
+        </div>
       </div>
     </div>
 
-    <div class="card">
-      <img src="assets/bigquery1.png" alt="BigQuery">
-      <h3>BigQuery Data Exploration (Part 1)</h3>
-      <p>Explored HUD homelessness data using BigQuery. Created a new table with metrics and cleaned the data with SQL.</p>
-      <div class="tags">
-        <span class="tag">SQL</span>
-        <span class="tag">BigQuery</span>
-        <span class="tag">Data Wrangling</span>
-      </div>
-      <div class="buttons">
-        <a href="https://github.com/mario2826/BigQuery-Part-1" target="_blank">GitHub Repo</a>
-      </div>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/mario-feliciano-4aa285175" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="assets/Mario_Feliciano_Resume.pdf" target="_blank"><i class="fas fa-file"></i> Resume</a>
+      <a href="https://github.com/mario2826" target="_blank"><i class="fab fa-github"></i> GitHub</a>
     </div>
-
-    <div class="card">
-      <img src="assets/bigquery2.png" alt="BigQuery">
-      <h3>BigQuery Data Exploration (Part 2)</h3>
-      <p>Analyzed homelessness trends by state and location using SQL. Tracked unsheltered rates and identified high-need areas.</p>
-      <div class="tags">
-        <span class="tag">SQL</span>
-        <span class="tag">BigQuery</span>
-        <span class="tag">Trend Analysis</span>
-      </div>
-      <div class="buttons">
-        <a href="https://github.com/mario2826/BigQuery-Part-2" target="_blank">GitHub Repo</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="footer-buttons">
-    <a href="https://www.linkedin.com/in/mariofeliciano1/" target="_blank">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn">
-      LinkedIn
-    </a>
-    <a href="assets/Mario_Feliciano_Resume.pdf" target="_blank">
-      <img src="https://img.icons8.com/fluency/48/resume.png" alt="Resume">
-      View My Resume
-    </a>
-    <a href="https://github.com/mario2826" target="_blank">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
-      GitHub
-    </a>
   </div>
 </body>
 </html>
