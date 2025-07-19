@@ -9,10 +9,11 @@
   <style>
 .project-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
   margin-top: 1rem;
 }
+
 .project-card {
   background: #f8f8f8;
   padding: 1rem;
@@ -20,18 +21,29 @@
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
   text-align: center;
 }
+
 .project-card img {
   width: 100%;
   height: auto;
   border-radius: 8px;
+  margin-bottom: 0.75rem;
 }
+
 .project-card a {
   display: inline-block;
-  margin: 0.25rem;
+  margin: 0.25rem 0.5rem;
   text-decoration: none;
-  color: #0077cc;
+  color: #fff;
+  background-color: #0077cc;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+.project-card a:hover {
+  background-color: #005fa3;
 }
 </style>
+
 </head>
 
 <body>
@@ -45,19 +57,25 @@
   <div class="project-card">
     <img src="assets/deloitte.png" alt="Deloitte Simulation">
     <h3>Deloitte Job Simulation</h3>
-    <p>Analyzed business data and presented insights using Excel and Tableau.</p>
-    <a href="https://public.tableau.com/..." target="_blank">View Dashboard</a>
-    <a href="https://github.com/yourname/deloitte-simulation" target="_blank">View Code</a>
+    <p>Completed a job simulation with Deloitte via Forage. Cleaned and analyzed datasets in Excel, created actionable insights.</p>
+    <a href="https://github.com/Mario2826/Forage-Deloitte-Job-Simulation" target="_blank">GitHub Repo</a>
+    <a href="https://public.tableau.com/your-dashboard-link-here" target="_blank">View Dashboard</a>
   </div>
 
   <div class="project-card">
-    <img src="assets/hotel.png" alt="Hotel Booking Analysis">
-    <h3>Hotel Booking Analysis</h3>
-    <p>Explored patterns in booking data using R and tidyverse libraries.</p>
-    <a href="https://github.com/yourname/hotel-analysis" target="_blank">View Project</a>
+    <img src="assets/bigquery1.png" alt="BigQuery Part 1">
+    <h3>BigQuery Data Exploration (Part 1)</h3>
+    <p>Explored HUD homelessness data using BigQuery. Created a new table with metrics and cleaned the data with SQL.</p>
+    <a href="https://github.com/Mario2826/BigQuery-Data-Exploration-Part-1" target="_blank">GitHub Repo</a>
+  </div>
+
+  <div class="project-card">
+    <img src="assets/bigquery2.png" alt="BigQuery Part 2">
+    <h3>BigQuery Data Exploration (Part 2)</h3>
+    <p>Analyzed homelessness trends by state and location using SQL. Tracked unsheltered rates and identified high-need areas.</p>
+    <a href="https://github.com/Mario2826/BigQuery-Data-Exploration-Part-2" target="_blank">GitHub Repo</a>
   </div>
 </div>
-
 
   <section class="container">
     <div class="card">
