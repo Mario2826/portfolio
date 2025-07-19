@@ -1,147 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mario Feliciano Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mario Feliciano | Data Analyst Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      height: 100%;
-      margin: 0;
-    }
-
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      min-height: 100%;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 40px 20px;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+      color: #ffffff;
       text-align: center;
     }
 
     h1 {
-      color: #007acc;
+      margin-top: 30px;
+      font-size: 2.5em;
+      color: #4da8ff;
     }
 
-    .project-container {
+    .about-me {
+      max-width: 700px;
+      margin: 10px auto 20px auto;
+      font-size: 16px;
+      color: #e0e0e0;
+    }
+
+    h2 {
+      margin: 20px;
+      color: #ffffff;
+    }
+
+    .projects {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
-      margin-top: 30px;
+      padding: 20px;
     }
 
-   .project-card {
-  background-color: white;
-  color: black; /* ✅ Add this line */
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
+    .project-card {
+      background-color: #ffffff;
+      color: #000000;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      width: 90%;
+      max-width: 300px;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
     .project-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
     }
 
     .project-card img {
-      max-width: 100%;
-      height: 100px;
-      object-fit: contain;
-      margin-bottom: 15px;
+      width: 80px;
+      height: auto;
     }
 
-    .btn {
+    .tags span {
+      background-color: #1e3a8a;
+      color: white;
+      padding: 4px 8px;
+      margin: 4px 2px;
+      border-radius: 12px;
+      font-size: 12px;
       display: inline-block;
-      padding: 8px 16px;
-      margin: 5px;
-      border: none;
-      border-radius: 4px;
+    }
+
+    .button-group {
+      margin-top: 10px;
+    }
+
+    .button-group a {
       background-color: #28a745;
       color: white;
+      padding: 8px 12px;
+      margin: 4px;
+      border-radius: 5px;
       text-decoration: none;
-      cursor: pointer;
-      transition: background-color 0.2s ease;
-    }
-
-    .btn:hover {
-      background-color: #218838;
+      display: inline-block;
     }
 
     .footer {
-      margin-top: 50px;
+      margin-top: 40px;
       font-size: 14px;
     }
 
-    .resume-btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 20px;
-      background-color: #007bff;
-      color: white;
-      border-radius: 5px;
+    .footer a {
+      color: #4da8ff;
       text-decoration: none;
-      font-weight: bold;
-      transition: background-color 0.2s ease;
     }
 
-    .resume-btn:hover {
-      background-color: #0056b3;
+    .resume-button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    .resume-button:hover {
+      box-shadow: 0 0 10px #0d6efd;
+    }
+
+    .scroll-top-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #0d6efd;
+      color: white;
+      border: none;
+      padding: 10px 14px;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+      display: none;
+    }
+
+    .scroll-top-btn.show {
+      display: block;
     }
   </style>
 </head>
-<!-- Apply gradient inline here -->
-<body style="background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364); color: white;">
-  <div class="container">
-    <h1>Mario Feliciano</h1>
-    <p>Data Analyst | Tableau • SQL • R • Excel</p>
 
-    <h2>My Projects</h2>
-    <div class="project-container">
-      <div class="project-card">
-        <img src="assets/deloitte.png" alt="Deloitte Simulation">
-        <h3>Deloitte Job Simulation</h3>
-        <p>Completed a job simulation with Deloitte via Forage. Cleaned and analyzed datasets in Excel, created actionable insights.</p>
-        <a href="https://github.com/mario2826" class="btn" target="_blank">GitHub Repo</a>
-        <a href="https://public.tableau.com/app/profile/mario.feliciano/viz/DeloitteJobSimulationDashboard/FinalDashboard" class="btn" target="_blank">View Dashboard</a>
+<body>
+  <h1>Mario Feliciano</h1>
+  <p class="about-me">
+    I'm a data analyst with a passion for uncovering insights through SQL, R, Tableau, and Excel. With a background in retail inventory and analytics, I create dashboards and reports that drive smarter business decisions. Actively seeking roles that challenge me to grow.
+  </p>
+  <h2>My Projects</h2>
+  <div class="projects">
+    <div class="project-card">
+      <img src="assets/deloitte.png" alt="Deloitte">
+      <h3>Deloitte Job Simulation</h3>
+      <p>Completed a job simulation with Deloitte via Forage. Cleaned and analyzed datasets in Excel, created actionable insights.</p>
+      <div class="tags">
+        <span>Excel</span><span>Data Cleaning</span><span>Simulation</span>
       </div>
-
-      <div class="project-card">
-        <img src="assets/bigquery1.png" alt="BigQuery Part 1">
-        <h3>BigQuery Data Exploration (Part 1)</h3>
-        <p>Explored HUD homelessness data using BigQuery. Created a new table with metrics and cleaned the data with SQL.</p>
-        <a href="https://github.com/mario2826" class="btn" target="_blank">GitHub Repo</a>
-      </div>
-
-      <div class="project-card">
-        <img src="assets/bigquery2.png" alt="BigQuery Part 2">
-        <h3>BigQuery Data Exploration (Part 2)</h3>
-        <p>Analyzed homelessness trends by state and location using SQL. Tracked unsheltered rates and identified high-need areas.</p>
-        <a href="https://github.com/mario2826" class="btn" target="_blank">GitHub Repo</a>
+      <div class="button-group">
+        <a href="https://github.com/mario2826/Deloitte-Simulation">GitHub Repo</a>
+        <a href="https://public.tableau.com/app/profile/yourdashboard">View Dashboard</a>
       </div>
     </div>
-
-    <div class="footer">
-      <p>
-        Connect with me on <a href="https://www.linkedin.com/in/mariofeliciano" target="_blank">LinkedIn</a>,
-        view my <a href="assets/Mario_Feliciano_Resume.pdf" target="_blank">Resume</a>,
-        or explore my work on <a href="https://github.com/mario2826" target="_blank">GitHub</a>.
-      </p>
-      <a href="assets/Mario_Feliciano_Resume.pdf" class="resume-btn" target="_blank">View My Resume</a>
+    <div class="project-card">
+      <img src="assets/bigquery1.png" alt="BigQuery">
+      <h3>BigQuery Data Exploration (Part 1)</h3>
+      <p>Explored HUD homelessness data using BigQuery. Created a new table with metrics and cleaned the data with SQL.</p>
+      <div class="tags">
+        <span>SQL</span><span>BigQuery</span><span>Data Wrangling</span>
+      </div>
+      <div class="button-group">
+        <a href="https://github.com/mario2826/BigQuery-Exploration">GitHub Repo</a>
+      </div>
+    </div>
+    <div class="project-card">
+      <img src="assets/bigquery2.png" alt="BigQuery">
+      <h3>BigQuery Data Exploration (Part 2)</h3>
+      <p>Analyzed homelessness trends by state and location using SQL. Tracked unsheltered rates and identified high-need areas.</p>
+      <div class="tags">
+        <span>SQL</span><span>BigQuery</span><span>Trend Analysis</span>
+      </div>
+      <div class="button-group">
+        <a href="https://github.com/mario2826/BigQuery-Exploration">GitHub Repo</a>
+      </div>
     </div>
   </div>
+
+  <div class="footer">
+    <p>
+      Connect with me on <a href="https://linkedin.com/in/yourlinkedin" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>,
+      view my <a href="assets/Mario_Feliciano_Resume.pdf" target="_blank">Resume</a>,
+      or explore my work on <a href="https://github.com/mario2826" target="_blank"><i class="fab fa-github"></i> GitHub</a>.
+    </p>
+    <button class="resume-button" onclick="window.open('assets/Mario_Feliciano_Resume.pdf')">View My Resume</button>
+  </div>
+
+  <button onclick="scrollToTop()" class="scroll-top-btn">↑</button>
+
+  <script>
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    window.onscroll = function () {
+      document.querySelector('.scroll-top-btn').classList.toggle('show', window.scrollY > 200);
+    };
+  </script>
 </body>
+
 </html>
